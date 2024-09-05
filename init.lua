@@ -10,6 +10,7 @@ local old_show_formspec = minetest.show_formspec
 local show_formspec = function(playername, formname, formspec)
 	local player = minetest.get_player_by_name(playername)
 	local meta = player:get_meta()
+	--todo use the formspec methods to get the label out if possible
 	if string.match(formspec, "Fletching")then
 		meta:set_string("crafting_table", "fletching")
 	else
